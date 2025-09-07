@@ -1,0 +1,276 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Database formatting - Thread - Letterboxing USA Archive</title>
+            <link rel="stylesheet" href="../static/style.css">
+        </head>
+        <body>
+            <header>
+                <h1>Letterboxing USA - Yahoo Groups Archive</h1>
+                <nav>
+                    <a href="../index.html">Back to Index</a>
+                </nav>
+            </header>
+            
+            <main>
+                <h1 class="thread-title">Database formatting</h1>
+                <div class="thread-meta">
+                    5 messages in this thread | 
+                    Started on 2003-08-10
+                </div>
+                
+                <div class="thread-messages">
+                    
+            <div class="message first-message">
+                <div class="message-header">
+                    <h3 class="message-subject">Database formatting</h3>
+                    <div class="message-meta">
+                        From: <strong>abacus00 (abacus00@yahoo.com)</strong> | 
+                        Date: 2003-08-10 13:55:21 UTC
+                    </div>
+                </div>
+                <div class="message-content">
+                    <div class="plaintext-content">Now that I've done the first extract from the database I have <br/>
+a couple easy requests to assist that process.<br/>
+<br/>
+* Please avoid using commas. This goes for both dates and the <br/>
+text fields. Substitute "." "-" ";" "/" as appropriate. The <br/>
+extract process employs commas as field separators so Excel <br/>
+interprets any commas you use as a new field when parsing the<br/>
+data (separating it back into fields).<br/>
+<br/>
+* Substitute single quotes for double quotes if you want them <br/>
+to appear in the extract file. The extract process inserts <br/>
+quotes around each text field so I strip out all the double <br/>
+quotes.<br/>
+<br/>
+* Keep the Status to one or two words -- Good, Damp, etc. Expand<br/>
+with specifics in the Comments area.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div>
+                </div>
+            </div>
+            
+            <div class="message reply-message">
+                <div class="message-header">
+                    <h3 class="message-subject">Re: Database formatting</h3>
+                    <div class="message-meta">
+                        From: <strong>lb_seekyr (brad@gladehome.us)</strong> | 
+                        Date: 2003-08-10 21:11:20 UTC
+                    </div>
+                </div>
+                <div class="message-content">
+                    <div class="plaintext-content">Mahjong,<br/>
+<br/>
+Thanks for taking the initiative on this.  I think this is a great <br/>
+idea and hope it catches on with the group so that it becomes truly <br/>
+useful.<br/>
+<br/>
+One question I have is whether the table is intended to record <br/>
+individual visits to a letterbox, or the current status for each <br/>
+box.  (i.e. should the Letterbox name be a key for the table?)<br/>
+<br/>
+With this first use, each new box visitor would locate (or add if not <br/>
+present) the record for the box they visited and update this record <br/>
+with the latest status.  The advantage would be that there is one <br/>
+record to find for the most recent status of the box you are <br/>
+interested in, on the downside we'd lose the history of the comments <br/>
+section, and people might conflict on concurrent edits to the same <br/>
+box.<br/>
+<br/>
+With the second use, any given box could have multiple entries.  This <br/>
+avoids conflicts (entries would rarely be edited by multiple people <br/>
+at the same time), and keeps the history (which is nice).<br/>
+<br/>
+My personal opinion is that this latter use is the more interesting <br/>
+as it will serve to also illustrate how active the boxes. <br/>
+<br/>
+This use though will place more of an emphasis on the date column.  <br/>
+We're currently using quite a mixture of date formats. I think it <br/>
+will make the data much more useful if we standardize on a date <br/>
+format.  Unfortunately it looks as though the Yahoo table columns are <br/>
+just test strings.  This doesn't lead to good sorting behavior for <br/>
+dates.  Here are a couple of ideas:<br/>
+<br/>
+ o Standardize on a date format like:  YYYY-MM-DD<br/>
+<br/>
+   + This will sort the dates in a reasonable fashion in Yahoo.<br/>
+   - In practice though it will be nearly impossible to keep all the<br/>
+     records consist.<br/>
+<br/>
+ o Periodically download the data, scrub it, then upload the scrubbed<br/>
+   data.<br/>
+<br/>
+   + This approach could be used to enforce consistency in other<br/>
+     columns as well.  For example, the Status column you mentioned.<br/>
+   o I'm not sure whether Yahoo will support this or not.<br/>
+   - Updates made while the data is being scrubbed might be lost<br/>
+     if one isn't careful.<br/>
+   - It's a periodic maintenance task to make this happen.<br/>
+<br/>
+Thoughts?  BTW, I'd be happy to help with the maintenance.<br/>
+<br/>
+Cheers,<br/>
+<br/>
+-Brad (Seekyr).<br/>
+<br/>
+<br/>
+--- In letterbox-usa@yahoogroups.com, "abacus00" <abacus00@y...> <br/>
+wrote:<br/>
+&gt; Now that I've done the first extract from the database I have <br/>
+&gt; a couple easy requests to assist that process.<br/>
+&gt; <br/>
+&gt; * Please avoid using commas. This goes for both dates and the <br/>
+&gt; text fields. Substitute "." "-" ";" "/" as appropriate. The <br/>
+&gt; extract process employs commas as field separators so Excel <br/>
+&gt; interprets any commas you use as a new field when parsing the<br/>
+&gt; data (separating it back into fields).<br/>
+&gt; <br/>
+&gt; * Substitute single quotes for double quotes if you want them <br/>
+&gt; to appear in the extract file. The extract process inserts <br/>
+&gt; quotes around each text field so I strip out all the double <br/>
+&gt; quotes.<br/>
+&gt; <br/>
+&gt; * Keep the Status to one or two words -- Good, Damp, etc. Expand<br/>
+&gt; with specifics in the Comments area.<br/>
+<br/>
+<br/>
+</abacus00@y...></div>
+                </div>
+            </div>
+            
+            <div class="message reply-message">
+                <div class="message-header">
+                    <h3 class="message-subject">Re: Database formatting</h3>
+                    <div class="message-meta">
+                        From: <strong>ehughes52 (libby@twcny.rr.com)</strong> | 
+                        Date: 2003-08-10 23:54:21 UTC
+                    </div>
+                </div>
+                <div class="message-content">
+                    <div class="plaintext-content">A quick question, should we also keep our words to a minimum when<br/>
+making entries in the "comments" field on the new Database?  One of my<br/>
+entries is lengthy and mentions how beautiful the walk was, and I am<br/>
+wondering if I took up too much space, and should I restrict myself in<br/>
+the future.   Thanks. <br/>
+:-)<br/>
+catbead<br/>
+<br/>
+<br/>
+</div>
+                </div>
+            </div>
+            
+            <div class="message reply-message">
+                <div class="message-header">
+                    <h3 class="message-subject">Re: Database formatting</h3>
+                    <div class="message-meta">
+                        From: <strong>abacus00 (abacus00@yahoo.com)</strong> | 
+                        Date: 2003-08-11 09:09:56 UTC
+                    </div>
+                </div>
+                <div class="message-content">
+                    <div class="plaintext-content">Comments should include an elaboration of the one or two word<br/>
+status (if necessary) and any other information that might be<br/>
+useful to someone planning a letterboxing trip. Was the trail<br/>
+longer or harder than expected, more beautiful, heavily traveled,<br/>
+easy or hard for young children. Were the clues clear or hard to <br/>
+follow. Is the stamp exceptional. Those wonderful boxing stories <br/>
+should be saved for the talk list. For the database, it's "just <br/>
+the facts." <br/>
+<br/>
+Please do not include hints (or spoilers) to clues that the <br/>
+placer has made intentionally vague. If you visit a mystery box<br/>
+in conjunction with other boxes you should probably just list <br/>
+the year and month and not the date for the mystery box.<br/>
+<br/>
+--Mahjong<br/>
+<br/>
+--- In letterbox-usa@yahoogroups.com, "ehughes52" <libby@t...> wrote:<br/>
+&gt; A quick question, should we also keep our words to a minimum when<br/>
+&gt; making entries in the "comments" field on the new Database?  One <br/>
+of my<br/>
+&gt; entries is lengthy and mentions how beautiful the walk was, and I <br/>
+am<br/>
+&gt; wondering if I took up too much space, and should I restrict <br/>
+myself in<br/>
+&gt; the future.   Thanks. <br/>
+&gt; :-)<br/>
+&gt; catbead<br/>
+<br/>
+<br/>
+</libby@t...></div>
+                </div>
+            </div>
+            
+            <div class="message reply-message">
+                <div class="message-header">
+                    <h3 class="message-subject">Re: [LbNA] Database formatting</h3>
+                    <div class="message-meta">
+                        From: <strong>Deb King (debean75@yahoo.com)</strong> | 
+                        Date: 2003-08-11 05:40:35 UTC-07:00
+                    </div>
+                </div>
+                <div class="message-content">
+                    <div class="plaintext-content">Great work on the Database! One quick question. Since it posts alphabetically, should there be a note to drop 'The' so, for instance,  'The Bassackwards Letterbox' would post under 'B' and not 'T'? Or am I getting too picky? :)<br/>
+<br/>
+Debean<br/>
+<br/>
+abacus00 <abacus00@yahoo.com> wrote:<br/>
+Now that I've done the first extract from the database I have <br/>
+a couple easy requests to assist that process.<br/>
+<br/>
+* Please avoid using commas. This goes for both dates and the <br/>
+text fields. Substitute "." "-" ";" "/" as appropriate. The <br/>
+extract process employs commas as field separators so Excel <br/>
+interprets any commas you use as a new field when parsing the<br/>
+data (separating it back into fields).<br/>
+<br/>
+* Substitute single quotes for double quotes if you want them <br/>
+to appear in the extract file. The extract process inserts <br/>
+quotes around each text field so I strip out all the double <br/>
+quotes.<br/>
+<br/>
+* Keep the Status to one or two words -- Good, Damp, etc. Expand<br/>
+with specifics in the Comments area.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Yahoo! Groups SponsorADVERTISEMENT<br/>
+<br/>
+Your use of Yahoo! Groups is subject to the Yahoo! Terms of Service. <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+---------------------------------<br/>
+Do you Yahoo!?<br/>
+Yahoo! SiteBuilder - Free, easy-to-use web site design software<br/>
+<br/>
+[Non-text portions of this message have been removed]<br/>
+<br/>
+<br/>
+</abacus00@yahoo.com></div>
+                </div>
+            </div>
+            
+                </div>
+            </main>
+            
+            <footer>
+                <p>Generated by Yahoo Groups Mbox to Static Website Converter</p>
+            </footer>
+            
+            <script src="../static/script.js"></script>
+        </body>
+        </html>
+        

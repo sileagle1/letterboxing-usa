@@ -1,0 +1,449 @@
+
+/* Basic styling for the archive */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f8fa;
+}
+
+/* Thread and message styles */
+.thread-title {
+    color: #24292e;
+    margin-bottom: 8px;
+}
+
+.thread-meta {
+    color: #6a737d;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.thread-messages {
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.message {
+    padding: 20px;
+    border-bottom: 1px solid #eaecef;
+    transition: background-color 0.2s;
+}
+
+.message:last-child {
+    border-bottom: none;
+}
+
+.message:hover {
+    background-color: #f6f8fa;
+}
+
+.message.first-message {
+    background-color: #f8f9fa;
+    border-left: 3px solid #0366d6;
+}
+
+.message.reply-message {
+    margin-left: 30px;
+    border-left: 2px solid #e1e4e8;
+    position: relative;
+}
+
+.message.reply-message:before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    width: 16px;
+    height: 2px;
+    background-color: #e1e4e8;
+}
+
+.message-header {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.message-header:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.message-subject {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #24292e;
+}
+
+.reply-message .message-subject {
+    color: #6a737d;
+    font-size: 1em;
+}
+
+.message-meta {
+    color: #6a737d;
+    font-size: 0.85em;
+    line-height: 1.5;
+}
+
+.message-meta strong {
+    color: #24292e;
+}
+
+.message-content {
+    line-height: 1.6;
+}
+
+.message-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.plaintext-content {
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.pagination-controls {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.pagination a, 
+.pagination span {
+    padding: 8px 12px;
+    margin: 0 2px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    display: inline-block;
+    min-width: 38px;
+    text-align: center;
+    transition: all 0.2s ease;
+    color: #0366d6;
+    background-color: #fff;
+}
+
+.pagination a:hover {
+    background-color: #f6f8fa;
+    text-decoration: none;
+    border-color: #d1d5da;
+}
+
+.pagination .current {
+    background-color: #0366d6;
+    color: #fff;
+    border-color: #0366d6;
+    font-weight: 600;
+}
+
+.pagination .disabled {
+    color: #d1d5da;
+    cursor: not-allowed;
+    background-color: #f6f8fa;
+}
+
+.pagination .ellipsis {
+    border: none;
+    padding: 8px 4px;
+    color: #6a737d;
+    background: transparent;
+}
+
+@media (max-width: 768px) {
+    .pagination a, 
+    .pagination span {
+        padding: 6px 10px;
+        min-width: 34px;
+        font-size: 0.9em;
+    }
+    
+    .pagination .ellipsis {
+        padding: 6px 2px;
+    }
+}
+
+/* Search */
+.search-container {
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+.search-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#search-input, #search-query {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px 0 0 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#search-input:focus, #search-query:focus {
+    border-color: #0366d6;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+}
+
+#search-button, #search-form button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #2ea44f;
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#search-button:hover, #search-form button[type="submit"]:hover {
+    background-color: #2c974b;
+}
+
+#search-button:active, #search-form button[type="submit"]:active {
+    background-color: #298e46;
+}
+
+/* Search results */
+.search-results {
+    margin-top: 20px;
+}
+
+.search-result {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-result:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-result h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.search-result h3 a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.search-result h3 a:hover {
+    text-decoration: underline;
+}
+
+.search-meta {
+    color: #6a737d;
+    font-size: 14px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.thread-dates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.thread-dates span {
+    display: inline-flex;
+    align-items: center;
+    color: #6a737d;
+}
+
+.thread-dates span:first-child::before {
+    display: none;
+}
+
+.thread-dates span:not(:first-child) {
+    padding-left: 8px;
+    border-left: 1px solid #e1e4e8;
+}
+
+/* Loading indicator */
+#loading {
+    color: #6a737d;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.pagination a, .pagination span {
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    color: #0366d6;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.pagination a:hover {
+    background-color: #f6f8fa;
+    border-color: #d1d5da;
+}
+
+.pagination .current {
+    background-color: #0366d6;
+    color: white;
+    border-color: #0366d6;
+    font-weight: 600;
+}
+
+.pagination .ellipsis {
+    border: none;
+    padding: 8px 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .search-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #search-input, #search-query, #search-button, #search-form button[type="submit"] {
+        width: 100%;
+        border-radius: 6px;
+    }
+    
+    .pagination {
+        gap: 4px;
+    }
+    
+    .pagination a, .pagination span {
+        padding: 6px 10px;
+        margin: 2px;
+    }
+}
+
+
+/* Thread preview in index */
+.thread-preview {
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.thread-preview:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.thread-preview h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.thread-preview .thread-meta {
+    color: #6a737d;
+    font-size: 0.85em;
+    margin-bottom: 8px;
+}
+
+.thread-preview .message-snippet {
+    color: #586069;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 15px !important;
+    }
+    
+    .message {
+        padding: 12px !important;
+    }
+    
+    .reply-message {
+        margin-left: 15px !important;
+    }
+    
+    .message-content {
+        font-size: 15px !important;
+    }
+    
+    .message-content p, 
+    .message-content div, 
+    .message-content span, 
+    .message-content li, 
+    .message-content td, 
+    .message-content th, 
+    .message-content pre, 
+    .message-content code, 
+    .message-content blockquote {
+        font-size: 15px !important;
+    }
+    
+    .thread-title {
+        font-size: 1.5em !important;
+    }
+    
+    .message-content h1 { font-size: 1.5em !important; }
+    .message-content h2 { font-size: 1.3em !important; }
+    .message-content h3 { font-size: 1.15em !important; }
+    .message-content h4 { font-size: 1em !important; }
+    .message-content h5 { font-size: 0.9em !important; }
+    .message-content h6 { font-size: 0.85em !important; }
+}
